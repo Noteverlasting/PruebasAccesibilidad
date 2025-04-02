@@ -1,0 +1,233 @@
+@charset "UTF-8";
+
+@font-face {
+    font-family: "Lato";
+    src: url("../fonts/Lato-Regular.woff2") format("woff2"),
+      url("../fonts/Lato-Regular.woff") format("woff"),
+      url("../fonts/Lato-Regular.ttf") format ("ttf");
+    font-style: normal;
+    font-display: swap;
+  }
+  
+  @font-face {
+    font-family: "Dancing Script";
+    src: url("../fonts/DancingScript-Regular.woff2") format("woff2"),
+      url("../fonts/DancingScript-Regular.woff") format("woff"),
+      url("../fonts/DancingScript-SemiBold.ttf") format("ttf");
+    font-style: normal;
+    font-display: swap;
+  }
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Lato";
+    list-style: none;
+    color: white;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+}
+
+h1{ 
+    font-family: 'Dancing Script';
+    text-align: center;
+    color: rgb(38, 73, 214);
+    font-size: clamp(2.5rem, 3.5vw + 2rem,3.5rem);
+    text-shadow: 1px 1px 1px rgb(6, 2, 115);
+    padding: 0 0 1.5rem 0;
+    font-weight: 900;
+    line-height: 75%;
+
+    span {
+        font-family: 'Dancing Script';
+        text-align: center;
+        color: rgb(95, 113, 187);
+        font-size: clamp(1rem, 2.5vw + 1.5rem,2.5rem);
+        text-shadow: 1px 1px 1px rgb(6, 2, 115);
+        padding: 1.5rem;
+    }
+  }
+.recomendaciones {
+    line-height: 100%;
+    padding: 1rem;
+}
+
+.imgIndex {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 50% 20%;
+}
+
+.imgHotel {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 50% 60%;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+
+  &:hover {
+    color: cadetblue;
+  }
+}
+
+
+
+p{
+    color:rgb(9, 9, 51);
+    text-align: center;
+    font-size: clamp(1rem, 1vw, 1.25rem);
+    margin: 1rem;
+}
+
+
+nav {
+    background-color: blue;
+    position: sticky;
+    top: 0px;
+    height: 45px;
+    z-index: 10;
+    ul {
+    display: flex;
+    justify-content: space-around;
+    padding-top: 15px;
+    font-weight: 600;
+}
+}
+
+.desktop_xl {
+    margin: 0 auto;
+    max-width: 800px;
+
+}
+
+
+
+.sectionImg {
+    padding: 0;
+    border: 0;
+    width: 100%; /* Ajusta el ancho del contenedor */
+    height: 500px; /* Ajusta la altura deseada */
+    overflow: hidden; /* Oculta el contenido que se desborda */
+    position: relative;
+}
+
+
+.cosasSI, .cosasNO {
+    padding: 0 5rem;
+
+    li {
+        color: rgb(25, 66, 141);
+        padding-left: .5rem;
+    }
+}
+.cosasSI li::marker {
+    content: '✔'; /* Unicode para tick */
+    color: green; /* Color del tick */
+    font-size: 1.2rem; /* Tamaño del tick */
+}
+.cosasNO li::marker {
+    content: '✖'; /* Unicode para tick */
+    color: rgb(128, 0, 0); /* Color del tick */
+    font-size: 1.2rem; /* Tamaño del tick */
+}
+
+
+
+.section {
+    margin: 2rem 0;
+}
+
+section  h2 {
+    font-size: clamp(.8rem, 1.2vw + 1rem, 1.5rem);
+    color: rgb(255, 255, 255);
+    text-align: center;
+    margin: 0 0 1rem 0;    
+    background-color: rgb(28, 80, 175);
+    padding: 1rem;  
+}
+
+section > div {
+    
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden;
+    padding: 0 0 2rem 0;
+    border: 1px solid blue;
+}
+
+
+.footerlogosApp{
+    img {
+        width: 60%;
+        max-width: 200px;
+        height: auto;
+    }
+}
+
+.footerlogos{
+    img {
+        width: 15%;
+        max-width: 20px;
+        height: auto;
+        margin: 0 .5rem
+    }
+}
+
+footer {
+
+    background-color: blue;
+
+    >p {
+        text-align: center;
+        padding: 1rem 0;
+        color: white;
+    }
+
+    >div {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 1rem 0.5rem 1rem;
+    column-gap: 2rem;
+    
+        h2 {
+          font-family: "Lato";
+          font-size: small;
+          text-align: left;
+          padding: .5rem 0 .5rem 0;
+        }
+  
+        div {
+        display: flex;
+        flex-direction: column;
+  
+            li {
+            font-size: 0.9rem;
+            padding: .5rem 0 .25rem 0;
+            }
+            >img {
+            width: 10vw;
+            }
+  
+            div {
+            display: flex;
+            flex-direction: row;
+                img {
+                max-width: 50px;
+                padding-left: 1rem;
+                }
+            }
+      
+        }
+    }
+}
